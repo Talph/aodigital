@@ -1,0 +1,29 @@
+.footer-container {
+    margin-top: 40px;
+    text-align: right;
+
+    .container {
+
+        .footer {
+            .block {
+                
+                display: inline-block;
+                font-weight: 700;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+
+                .block-text {
+                    &.dream {
+                        text-align: right;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}

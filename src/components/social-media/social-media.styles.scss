@@ -1,0 +1,27 @@
+.social-media {
+    flex-flow: row nowrap;
+    list-style: none;
+    display: flex;
+
+    @media (max-width: 768px) {
+        list-style: none;
+        display: flex;
+    }
+
+    .social {
+        width: 15px;
+        margin-left: 2px;
+
+        @media (max-width: 768px) {
+            width: 30px;
+
+            .cls-1 {
+                stroke: #ffffff;
+            }
+
+            .cls-2 {
+                fill: #ffffff;
+            }
+        }
+    }
+}

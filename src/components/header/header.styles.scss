@@ -1,0 +1,20 @@
+.header {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .logo-container {
+            max-width: 250px;
+            min-width: 75px;
+
+            @media (max-width: 768px) {
+                min-width: 75px;
+            }
+        }
+
+        .logo {
+            padding-top: 15px;
+        }
+    }
+}

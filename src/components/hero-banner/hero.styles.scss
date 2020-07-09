@@ -1,0 +1,64 @@
+.hero-container {
+
+    .hero {
+        position: relative;
+        height: 55vh;
+        margin-top: 15vh;
+        text-align: right;
+        @media (max-width: 768px) {
+            margin-top: 5vh;
+        }
+        .hero-text {
+            width: 100%;
+            z-index: 1;
+            text-align: right;
+            line-height: 1;
+            font-weight: 700;
+            font-size: 6vw;
+
+            @media (max-height: 992px) and (max-width: 425px)
+{
+    padding-left: 15px;
+    font-size: 6.25vh;
+}
+        }
+        .italics{
+            font-family: "Times";
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+    }
+
+    .solution-container {
+        position: fixed;
+        top: 48%;
+        z-index: 1;
+        left: 0px;
+        
+        .solutions{
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            margin-left: -120px;
+            font-size: 15px;
+
+            @media (min-width: 992px){
+    margin-left: -90px;
+}
+@media (max-width: 768px) {
+    margin-left: -165px;
+}
+
+.tiny-box{
+    width:6px;
+    height:6px;
+    margin-left:15px;
+    margin-right:2px;
+    background-color: #000000;
+    display: inline-block;
+    outline: none;
+    border: none;
+}
+        }
+    }
+}
