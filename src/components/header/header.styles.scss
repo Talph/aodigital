@@ -1,20 +1,48 @@
+$cyber-yellow: #ffde17;
+$forest-green: #0c2428;
+$dark-turquoise: #00CED1;
+$black: #000000;
+$white: #ffffff;
+$forest-green-75: #0c2428bf;
+
 .header {
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    background-color: $forest-green-75;
 
     .container {
-        display: flex;
-        justify-content: space-between;
+        .navbar-container {
+            -webkit-box-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: flex;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
 
-        .logo-container {
-            max-width: 250px;
-            min-width: 75px;
+            .logo-container {
+                -webkit-box-align: center;
+                align-items: center;
+                display: -webkit-box;
+                display: flex;
+                width: 12.5rem;
 
-            @media (max-width: 768px) {
-                min-width: 75px;
+                .logo-link {
+                    display: block;
+                    font-size: 0;
+                    -webkit-transition: opacity .4s ease;
+                    transition: opacity .4s ease;
+                    width: 5rem;
+                }
+
+                @media (max-width: 768px) {
+                    min-width: 75px;
+                }
             }
-        }
 
-        .logo {
-            padding-top: 15px;
         }
     }
 }

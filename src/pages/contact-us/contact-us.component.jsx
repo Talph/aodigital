@@ -1,11 +1,10 @@
 import React from 'react';
+import Contacts from '../../components/contacts/contacts.component'
 import './contact-us.styles.scss';
 
-
 const ContactUs = () => (
-    <div className="contact-us-page">
-         <div className="container">
-        <h1>Contact us</h1></div>
+    <div className="contact-us-page content">
+        <Contacts />
     </div>
 )
 

@@ -3,9 +3,6 @@ export const menuData = [
         label: 'Agency',
         Url: '/agency',
     },{
-        label: 'Solutions',
-        Url: '/solutions',
-    },{
         label: 'White Label',
         Url: '/white-label',
     },{

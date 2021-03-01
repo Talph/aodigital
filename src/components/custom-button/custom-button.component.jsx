@@ -1,7 +1,7 @@
 import React from 'react';
 import './custom-button.styles.scss';
 
-const CustomButoon = ({children, ...otherProps}) =>(
+const CustomButton = ({children, ...otherProps}) =>(
     <button className="learn-ao"  {...otherProps}>
     <span className="circle" aria-hidden="true">
 <span className="icon arrow"></span>
@@ -11,4 +11,4 @@ const CustomButoon = ({children, ...otherProps}) =>(
 
 )
 
-export default CustomButoon;
+export default CustomButton;

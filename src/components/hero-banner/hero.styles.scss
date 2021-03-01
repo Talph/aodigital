@@ -1,3 +1,9 @@
+$cyber-yellow: #ffde17;
+$forest-green: #0c2428;
+$dark-turquoise: #00CED1;
+$black: #000000;
+$white: #ffffff;
+
 .hero-container {
 
     .hero {
@@ -14,8 +20,14 @@
             text-align: right;
             line-height: 1;
             font-weight: 700;
-            font-size: 6vw;
-
+            font-size: 4vw;
+            padding-left: 20%;
+            @media (max-width: 768px) {
+                font-size: 5vh;
+            }
+            @media (max-width: 767px) {
+                padding-left: 2%;
+            }
             @media (max-height: 992px) and (max-width: 425px)
 {
     padding-left: 15px;
@@ -27,6 +39,13 @@
             font-weight: bold;
             font-style: italic;
         }
+        .learn__more__button{
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        .ao-yellow{
+            color:$cyber-yellow;
+        }
         
     }
 
@@ -35,7 +54,7 @@
         top: 48%;
         z-index: 1;
         left: 0px;
-        
+    
         .solutions{
             -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
@@ -53,8 +72,9 @@
     width:6px;
     height:6px;
     margin-left:15px;
+    top:5px;
     margin-right:2px;
-    background-color: #000000;
+    background-color: $cyber-yellow;
     display: inline-block;
     outline: none;
     border: none;

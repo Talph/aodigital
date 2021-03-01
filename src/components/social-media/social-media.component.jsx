@@ -30,3 +30,7 @@ const SocialMedia = ({children, ...otherProps}) => (
 )
 
 export default SocialMedia;
+
+
+// <SocialMedia/>
+// import SocialMedia from '../social-media/social-media.component';

@@ -1,0 +1,76 @@
+$cyber-yellow: #ffde17;
+$forest-green: #0c2428;
+$dark-turquoise: #00CED1;
+$black: #000000;
+$white: #ffffff;
+
+.our-privacy-policy-page{
+.wrapper{
+    position: relative;
+    .offside{
+        position: absolute;
+        top:25px;
+        width: 25%;
+    }
+    .p-content{
+        width:75%;
+        margin: 0 auto;
+        .page-header-p h1.header__title {
+        font-weight: 300;
+        font-size: 3.0rem;
+        line-height: 3.5rem;
+        margin-bottom: 25px;
+       } 
+h4.subheading__heading{
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: normal; 
+    margin-bottom:30px;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: normal;
+    margin-top:15px; 
+    margin-bottom:10px; 
+}
+a{
+    color: $cyber-yellow;
+    &:hover{
+        color: $dark-turquoise;
+    }
+}
+    p{
+        line-height: normal;
+        margin: 10px 0;
+    }
+
+    ul{
+        line-height: 1.2rem;
+        margin: 2rem 0 3rem 2.5rem;
+        position: relative;
+        list-style: none;
+        padding: 0;
+
+        li{
+            position: relative;
+            margin-bottom: 2rem;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -2.5rem;
+                top: .2rem;
+                display: block;
+                background: $dark-turquoise;
+                width: .8rem;
+                height: .8rem;
+                border-radius: 50%;
+            }
+        }
+
+    }
+
+
+}
+}}

@@ -17,18 +17,19 @@ class Header extends React.Component{
 
 render() {
     return(
-        <div className='header'>
+        <header className='header'>
             <div className="container">
+            <div className='navbar-container'>
         <div className='logo-container'>
         <Link className='logo-link' to='/'>
             <Logo className='logo'/>
             </Link>
             </div>
-            <div className='navbar-container'>
-            <Navbar />
+            
+            <Navbar/>
             </div>
             </div>
-        </div>
+        </header>
     )
 }
 }

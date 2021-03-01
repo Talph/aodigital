@@ -13,14 +13,13 @@ class Typer extends React.Component {
       this.state = {
         text: '',
         isDeleting: false,
-        loopNum: 0,
+        loopNum: 1,
         typingSpeed: 150
       }
     }
 
     componentDidMount() {
         this.handleType()
-     
     }
   
     handleType = () => {
@@ -51,7 +50,7 @@ class Typer extends React.Component {
     };
   
     componentWillUnmount(){
-        this.handleType = null
+        this.handleType = false
     }
 
     render() {    

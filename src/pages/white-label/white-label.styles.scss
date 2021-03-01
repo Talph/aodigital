@@ -1,0 +1,160 @@
+$cyber-yellow: #ffde17;
+$forest-green: #0c2428;
+$dark-turquoise: #00CED1;
+$black: #000000;
+$white: #ffffff;
+
+.white-label-page {
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
+
+    .wrapper {
+
+        .page-header {
+            position: relative;
+
+            @media (max-width: 768px) {
+                margin-left: 0;
+            }
+
+            h1.header__title {
+                font-weight: 300;
+                font-size: 3.0rem;
+                padding-left: 13rem;
+                @media (max-width: 1024px) {
+                    padding-left: 10rem;
+                }
+                @media (max-width: 768px) {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    padding-left: 0;
+                }
+            }
+        }
+        .inner__content {
+            margin-bottom: 6rem;
+
+        .blocks {
+            display: flex;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        
+            [class*="block-"] {
+                float: left;
+                margin-left: 2%;
+
+                @media (max-width: 768px) {
+                    margin-left: 0;
+                }
+            }
+
+            .first {
+                margin-left: 0;
+            }
+
+            .block-2 {
+                width: 16%;
+
+                &.mr_2 {
+                    @media (max-width: 768px) {
+                        margin-right: 10%;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    width: 25%
+                }
+
+                h4 {
+                    font-size: 1rem;
+
+                    @media (max-width: 768px) {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .block-8 {
+                width: 75%;
+
+                @media (max-width: 768px) {
+                    width: 65%
+                }
+
+                .block-3 {
+                    width: 32%;
+
+                    h4.h4-header {
+                        padding-bottom: 15px;
+
+                        @media (max-width: 768px) {
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    &.mt_2 {
+                        @media (max-width: 768px) {
+                            margin-top: 5%;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .block__6 {
+                &.first {
+                    margin-left: 0;
+                }
+
+                width: 48%;
+                margin-left: 2%;
+                display: inline-block;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+
+                .footer__contact__arrow {
+                    width: 30px;
+                }
+            }
+
+            .block-text {
+                &.dream {
+                    text-align: right;
+                    font-weight: 400;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+    }
+
+    .fixed-bg {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        color: white;
+        text-align: center;
+        display: table;
+        height: 100vh;
+        @media (max-width: 768px) {
+            background-size: cover;
+            height:70vh;
+        }
+    }
+
+    .bg-1 {
+        background-image: url('../../assets/parallax-white-label.jpg');
+    }
+}

@@ -4,9 +4,12 @@ import './homepage.styles.scss';
 
 
 const HomePage = () => (
-    <div className="homepage">
+    <div className="homepage content">
         <div className="container">
-        <Hero/>
+            <div className="side__padding">
+            <Hero/>
+            </div>
+        
         </div>
     </div>
 )

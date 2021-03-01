@@ -1,3 +1,9 @@
+$cyber-yellow: #ffde17;
+$forest-green: #0c2428;
+$dark-turquoise: #00CED1;
+$black: #000000;
+$white: #ffffff;
+
 div{
     .burger {
         width: 2.5rem;
@@ -21,7 +27,7 @@ div{
         }
         &.open{
             div {
-                background-color:#ccc;
+                background-color:$white;
                 &:nth-child(1) {
                     transform:rotate(45deg);
                   }
@@ -37,7 +43,7 @@ div{
     }
         &.close{
             div{
-                background-color:#888;
+                background-color:$white;
                 &:nth-child(1) {
                     transform:rotate(0);
                     width: 10px;

@@ -1,0 +1,27 @@
+$cyber-yellow: #ffde17;
+$forest-green: #0c2428;
+$dark-turquoise: #00CED1;
+$black: #000000;
+$white: #ffffff;
+.page-header{
+    position: relative;
+    margin-bottom: 3rem;
+    
+    @media (max-width: 768px) {
+        margin-left: 0;
+    }
+    h1.header__title{
+        font-weight: 300;
+        font-size: 3.0rem;
+        line-height: 3.5rem;
+        padding-left: 13rem;
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        @media (max-width: 480px) {
+            padding-left: 2rem;
+        }
+
+    }
+}

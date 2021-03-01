@@ -1,16 +1,6 @@
 
-  *, ::after, ::before {
-    box-sizing: border-box;
-  }
 
   body {
-    font-family: "raleway", sans-serif;
-    margin: 0;
-    font-size:14px;
-    color: #2d3339;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
-    background: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -20,11 +10,5 @@ code {
     monospace;
 }
 
-.container{
-  max-width:90vw;
-  margin: 0 auto;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+
 
