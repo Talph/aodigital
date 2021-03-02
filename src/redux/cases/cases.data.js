@@ -21,17 +21,38 @@ export const caseData = {
               }
             ]
           },
-          avant: {
-            id:2,
-            caseNumber:'002',
-            title: 'Avant Studio Architects',
-            routeName:'avant',
+          crisa:  {
+           id:2,
+           caseNumber:'002',
+           title: 'CRISA',
+           routeName:'crisa',
+           items: [
+             {
+               id:1,
+               caseNumber:'002',
+               name: 'CRISA',
+               routeName:'crisa',
+               category:'Web Development',
+               imageUrl: '/assets/images/cases/case-004.jpg',
+               galleryUrl:'/assets/images/cases/case-001.jpg',
+               galleryUrla: '/assets/images/cases/dripholic/logo.jpg',
+               galleryUrlb: '/assets/images/cases/dripholic/web-page.jpg',
+               galleryUrlc: '/assets/images/cases/dripholic/web-page-product.png',
+               description: 'We do the work that companies either don’t have the time for – or need to come in on a budget, but still, want the final product delivered under their name.'
+             }
+       ]
+   },
+   eunysiza: {
+            id:3,
+            caseNumber:'003',
+            title: 'Eunysiza Healthcare Service',
+            routeName:'eunysiza',
             items:[
                 {
                   id:2,
-                  caseNumber:'002',
-                  name: 'Avant Studio Architects',
-                  routeName:'avant',
+                  caseNumber:'003',
+                  name: 'Eunysiza Healthcare Service',
+                  routeName:'eunysiza',
                   category:'Website Development',
                   imageUrl: '/assets/images/cases/case-003.jpg',
                   galleryUrl:'/assets/images/cases/case-003.jpg',
@@ -41,28 +62,7 @@ export const caseData = {
                   description: 'We do the work that companies either don’t have the time for – or need to come in on a budget, but still, want the final product delivered under their name.'
                   }
                 ]
-              },
-           crisa:  {
-            id:3,
-            caseNumber:'003',
-            title: 'CRISA',
-            routeName:'crisa',
-            items: [
-              {
-                id:1,
-                caseNumber:'001',
-                name: 'CRISA',
-                routeName:'crisa',
-                category:'App Development',
-                imageUrl: '/assets/images/cases/case-004.jpg',
-                galleryUrl:'/assets/images/cases/case-001.jpg',
-                galleryUrla: '/assets/images/cases/dripholic/logo.jpg',
-                galleryUrlb: '/assets/images/cases/dripholic/web-page.jpg',
-                galleryUrlc: '/assets/images/cases/dripholic/web-page-product.png',
-                description: 'We do the work that companies either don’t have the time for – or need to come in on a budget, but still, want the final product delivered under their name.'
               }
-        ]
-    }
     
   }
 

@@ -9,10 +9,10 @@ import HomePage from './pages/homepage/homepage.component';
 import Solutions from './pages/solutions/solutions.component';
 import WhiteLabel from './pages/white-label/white-label.component';
 import CasePage from './pages/case-studies/case.component';
-
-import './App.css';
 import PrivacyPolicy from './pages/legal/privacy-policy/privacy-policy.component';
 
+import AnimatedCursor from "react-animated-cursor"
+import './App.css';
 
 class App extends React.Component{
   constructor(){
@@ -33,6 +33,15 @@ handleChange = (e) =>{
     return (
       <div>
         <Header className="app-header"/>
+              <AnimatedCursor
+                className='animatedCursor'
+                innerSize={12}
+                outerSize={18}
+                color='255, 222, 23'
+                outerAlpha={0.2}
+                innerScale={0.7}
+                outerScale={5}
+              />
         <Switch>
           <Route exact path="/" component={HomePage}/>
           <Route path="/agency" component={Agency}/>

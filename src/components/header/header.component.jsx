@@ -22,7 +22,7 @@ render() {
             <div className='navbar-container'>
         <div className='logo-container'>
         <Link className='logo-link' to='/'>
-            <Logo className='logo'/>
+            <Logo alt="AO Digital Agency" className='logo'/>
             </Link>
             </div>
             

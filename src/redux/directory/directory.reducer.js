@@ -12,20 +12,20 @@ const INITIAL_STATE = {
       {
         id:2,
         caseNumber:'002',
-        title: 'Avant Studio Architects',
-        routeName:'avant',
-        linkUrl: 'avant',
-        category:'Website Development',
-        imageUrl: '/assets/images/cases/case-003.jpg',
-      },
-      {
-        id:3,
-        caseNumber:'003',
         title: 'CRISA',
         routeName:'crisa',
         linkUrl: 'crisa',
         category:'App Development',
         imageUrl: '/assets/images/cases/case-004.jpg',
+      },
+      {
+        id:3,
+        caseNumber:'003',
+        title: 'Avant Studio Architects',
+        routeName:'avant',
+        linkUrl: 'avant',
+        category:'Website Development',
+        imageUrl: '/assets/images/cases/case-003.jpg',
       }
     ]
   };

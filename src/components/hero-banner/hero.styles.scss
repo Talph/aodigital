@@ -67,6 +67,10 @@ $white: #ffffff;
 @media (max-width: 768px) {
     margin-left: -165px;
 }
+@media (max-width: 480px) {
+    margin-left: -175px;
+    color: #909090;
+}
 
 .tiny-box{
     width:6px;

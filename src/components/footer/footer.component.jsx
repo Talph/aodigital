@@ -3,6 +3,7 @@ import { ReactComponent as Logo } from '../../assets/ao.svg';
 import {ReactComponent as Arrow} from '../../assets/icons/arrow.svg';
 import './footer.styles.scss';
 import EmailScrapingProtection from '../emails/email.component';
+import { Link } from 'react-router-dom';
 
 const email = "backoffice@aodigital.co.za";
 
@@ -38,7 +39,7 @@ const footer = () => (
         </div>
         <div className="blocks">
         <div className="block-text dream">
-      <span className="footer__logo"><Logo width="30" alt="AO Digital Agency"/></span> <span className="all__rights"> &copy; 2020 All rights reserved |<a href="/privacy-polic"> Privacy Policy</a></span>
+      <span className="footer__logo"><Logo width="30" alt="AO Digital Agency"/></span> <span className="all__rights"> &copy; 2020 All rights reserved |<Link to="/privacy-policy"> Privacy Policy</Link></span>
             </div>
         </div>
     </div>

@@ -19,6 +19,10 @@ $white: #ffffff;
     .blocks{
         margin:35px 0;
         display: flex;
+        @media (max-width: 767px) {
+            display: inline-block;
+         }
+
         .block__4{
             width: 31.333%;
             margin-left: 2%;
@@ -38,6 +42,11 @@ $white: #ffffff;
             width: 48%;
             margin-left: 2%;
             float: left;
+            &.push__right{
+                @media (max-width: 767px) {
+                    margin-bottom: 10px;
+                }
+            }
             &.first{
                 margin-left: 0;
             }
