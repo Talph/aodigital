@@ -147,10 +147,10 @@ $white: #ffffff;
         color: white;
         text-align: center;
         display: table;
-        height: 100vh;
+        height: 75vh;
         @media (max-width: 768px) {
             background-size: cover;
-            height:70vh;
+            height:50vh;
         }
     }
 

@@ -10,7 +10,7 @@ export default class ContactForm extends Component {
     super(props)
     this.state = {
       name__: '', surname__: '', email__: '', phone__: '', company__name_: '', contact__message_: '', terms__and__conditions_: false,
-      errors: []
+      errors: [], response: ''
     }
     this.change = this.change.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
@@ -46,8 +46,6 @@ export default class ContactForm extends Component {
   }
   )
 
-    const { history } = this.props
-
     const data = new FormData();
 
     data.append('name__', this.state.name__);
@@ -58,27 +56,25 @@ export default class ContactForm extends Component {
     data.append('contact__message_', this.state.contact__message_);
     data.append('terms__and__conditions_', this.state.terms__and__conditions_);
     
-    axios.post('https://dripholic.ao/api/ao-contact', data, {
+    axios.post('https://digital.ao/api/contact-agency', data, {
       headers: {
+        // 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
       
     })
     .then(response => {
-      this.setState({
-        response: response.data
-      })
-      history.push('/')
-      setTimeout(() => this.setState({
-        response:''
-      }), 6000)
+      this.setState(() => ({
+        response: response.data.message
+      }));
+        console.log(this.state.response);
     })
     .catch(error => {
-      this.setState({
-        errors: error.response
-
-      })
+      this.setState(()=> ({
+        errors: error.response.data.errors
+      }));
+      console.log(this.state.errors)
     }) 
   }
 
@@ -90,7 +86,7 @@ export default class ContactForm extends Component {
     if(this.hasErrorFor(field)){
       return(
         <span className='invalid-feedback'>
-          <strong>{this.state.errors[field][0]}</strong>
+          {this.state.errors[field][0]}
         </span>
       )
     }
@@ -102,12 +98,14 @@ export default class ContactForm extends Component {
 
     return (
       <div className="sign-up-form">
+
                       {this.state.response &&
              <div className="alert alert-drip"> 
              {this.state.response}
              </div>
              }
-              <form onSubmit={this.onSubmit}>
+
+              <form>
               <div className="blocks_contact" >
                       <div className="block__6 first">
                 <FormInput
@@ -120,6 +118,7 @@ export default class ContactForm extends Component {
                 onChange={e => this.change(e)} 
                 autoComplete="off"
                 />
+                
                 {this.renderErrorFor('name__')}
 </div>
 <div className="block__6">
@@ -138,6 +137,7 @@ export default class ContactForm extends Component {
 </div>
 
 <div className="blocks_contact" >
+  <div className="group">
                 <FormInput 
                 type="email" 
                 name="email__" 
@@ -150,7 +150,8 @@ export default class ContactForm extends Component {
                 autoComplete="off"
                 />
 {this.renderErrorFor('email__')}
-
+</div>
+<div className="group">
               <FormInput type="tel" 
               name="phone__" 
               className={`form-input ${this.hasErrorFor('phone__') ? 'is-invalid' : ''}`}  
@@ -162,10 +163,10 @@ export default class ContactForm extends Component {
               autoComplete="off"
               maxLength="13"
               minLength="10"
-              // pattern="[0-9]"
               />
 {this.renderErrorFor('phone__')}
-
+</div>
+<div className="group">
             <FormInput type="text" 
             name="company__name_"
             id="company__name_" 
@@ -177,7 +178,9 @@ export default class ContactForm extends Component {
             autoComplete="off"
             />
 {this.renderErrorFor('company__name_')}
+</div>
 
+<div className="group">
               <label htmlFor="contact__message_"
               className="contact__message_">	How may we help? 
               </label>
@@ -192,6 +195,8 @@ export default class ContactForm extends Component {
             aria-label="Message">
             </textarea>
             {this.renderErrorFor('contact__message_')}
+            </div>
+            <div>
           <input 
           defaultChecked={this.state.terms__and__conditions_} 
           onChange={e => this.CheckBoxChange(e)}
@@ -201,13 +206,15 @@ export default class ContactForm extends Component {
           <label 
           className="form-check-label small" 
           htmlFor="autoSizingCheck"> We care about your <a href="/privacy-policy">privacy</a> and automatically agree to our NDA. This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. </label>
+<div>
 {this.renderErrorFor('terms__and__conditions_')}
-<br/>
-        <CustomButton > {isLoading ? "Submitting..." : "Submit"} </CustomButton>
+{this.renderErrorFor('smtp')}
+</div>
+</div>
+        <CustomButton onClick={e => this.onSubmit(e)} > {isLoading ? "Submitting..." : "Submit"} </CustomButton>
         </div>
               </form>
           </div>
-
     )
   }
 }

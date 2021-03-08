@@ -10,6 +10,7 @@ import Solutions from './pages/solutions/solutions.component';
 import WhiteLabel from './pages/white-label/white-label.component';
 import CasePage from './pages/case-studies/case.component';
 import PrivacyPolicy from './pages/legal/privacy-policy/privacy-policy.component';
+import NotFound from './pages/error/error-404.component'
 
 import AnimatedCursor from "react-animated-cursor"
 import './App.css';
@@ -51,6 +52,7 @@ handleChange = (e) =>{
           <Route path="/contact-us" component={ContactUs}/>
           <Route path="/our-work" component={CasePage}/>
           <Route path="/privacy-policy" component={PrivacyPolicy}/>
+          <Route component={NotFound} />
         </Switch>
         <Footer/>
       </div>

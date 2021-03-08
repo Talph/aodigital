@@ -3,6 +3,7 @@ $forest-green: #0c2428;
 $dark-turquoise: #00CED1;
 $black: #000000;
 $white: #ffffff;
+$red: #fe2905;
 
 .contact__form{
     width: 75%;
@@ -31,7 +32,7 @@ $white: #ffffff;
     background-color: #041d21;
 
     .alert{
-        background-color: red;
+        background-color: $red;
         padding:10px;
         font-size:1rem;
         border-radius: 2rem;
@@ -39,6 +40,16 @@ $white: #ffffff;
     .blocks_contact{
         position: relative;
         clear: both;
+        .form-input.is-invalid {
+            border-color: $red;
+            padding-right: calc(1.6em + .75rem);
+            background-repeat: no-repeat;
+            background-position: right calc(.4em + .1875rem) center;
+            background-size: calc(.8em + .375rem) calc(.8em + .375rem);
+        }
+        .invalid-feedback{
+            color: $red;
+        }
         a {
             text-decoration: none;
             color: inherit;
@@ -91,8 +102,6 @@ $white: #ffffff;
         border-radius: 0;
         border: 1px solid #fff;
     }
-    #autoSizingCheck{
-margin-top:30px
-    }
-}}
+}
+}
 }
